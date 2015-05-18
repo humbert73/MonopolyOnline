@@ -53,18 +53,23 @@ public class Monopoly {
                     this.carreaux.put(i, c);
                 }
                 else if(caseType.compareTo("G") == 0){
+                    Carreau c = new Gare(i+1, data.get(i)[2], this, Integer.parseInt(data.get(i)[5]), Integer.parseInt(data.get(i)[6]));
                     System.out.println("Gare :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);
                 }
                 else if(caseType.compareTo("C") == 0){
+                    Carreau c = new Compagnie(i+1, data.get(i)[2], this, Integer.parseInt(data.get(i)[5]), Integer.parseInt(data.get(i)[6]));
                     System.out.println("Compagnie :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);
                 }
                 else if(caseType.compareTo("CT") == 0){
+                    Carreau c = new CarreauTirage(i+1, data.get(i)[2], this);
                     System.out.println("Case Tirage :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);
                 }
                 else if(caseType.compareTo("CA") == 0){
+                    Carreau c = new CarreauArgent(i+1, data.get(i)[2], this, Integer.parseInt(data.get(i)[4]));
                     System.out.println("Case Argent :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);
                 }
                 else if(caseType.compareTo("CM") == 0){
+                    Carreau c = new CarreauMouvement(i+1, data.get(i)[2], this);
                     System.out.println("Case Mouvement :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);
                 }
                 else
