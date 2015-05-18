@@ -66,7 +66,7 @@ public class Monopoly {
                 }
                 else if(caseType.compareTo("CA") == 0){
                     Carreau c = new CarreauArgent(i+1, data.get(i)[2], this, Integer.parseInt(data.get(i)[4]));
-                    System.out.println("Case Argent :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);
+                    System.out.println("Case Argent :\t" + data.get(i)[2] + "\t@ case " + data.get(i)[1]);+
                 }
                 else if(caseType.compareTo("CM") == 0){
                     Carreau c = new CarreauMouvement(i+1, data.get(i)[2], this);
